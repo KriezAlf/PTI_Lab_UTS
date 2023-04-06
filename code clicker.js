@@ -1,4 +1,4 @@
-const myTimeout = setTimeout(menuUtama, 11000);
+const myTimeout = setTimeout(menuUtama, 100);
 
 function clear_body() {
   let body = document.getElementById("body");
@@ -121,8 +121,9 @@ function about_menu() {
       Place Holder
       https://getbootstrap.com/docs/5.3/components/placeholders/#about
     </li>
-  </ul>`;
-  row2.innerHTML = `<div class="col text-center"><button id="start_btn" onclick="menuUtama();"><img src="Aset\\SIMPLE BUTTON\\back.png"/></button></div>`;
+  </ul>
+  <div class="col text-center"><button id="start_btn" onclick="menuUtama();"><img src="Aset\\SIMPLE BUTTON\\back.png"/></button></div>
+  `;
 }
 
 function play_menu() {
@@ -267,6 +268,7 @@ function play_menu() {
         </div>
       </div>
     </div>
+    <div class="col text-center"><button id="start_btn" onclick="menuUtama();"><img src="Aset\\SIMPLE BUTTON\\back.png"/></button></div>
     </center>
     </div><!--Page Wrapper-->
 </div>`;
