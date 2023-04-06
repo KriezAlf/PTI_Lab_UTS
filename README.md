@@ -42,3 +42,4 @@ dan 2 item diantaranya untuk menambahkan jumlah money per second
 terdapat 1 item yang menambahkan jumlah money per second dengan jumlah 1000 )
 
 untuk game yang kami buat ini, tidak dapat kalah atau game over. sehingga user dapat memainkannya dengan santai dan tanpa penuh beban.
+Jika kalian memilih untuk menekan tombol back saat ditengah permainan, data kalian akan tersave dan auto clicker akan tetap berjalan
