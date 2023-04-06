@@ -1,0 +1,20 @@
+Aset akan membutuhkan
+- Background
+- Icon
+- Pet
+
+Akan ada 3 macam Pet dan membutuhkan 3 stage
+- stage bayi
+- stage remaja
+- stage dewasa
+
+masing-masing stage akan membutuhkan
+- Idle state
+- Eating state (can either eat medicine or food)
+- Down state (can be either caused by being hungry or sick or is currently in bad mood caused by low satisfaction)
+- Moving Left
+- Moving Right
+- Moving Up
+- Moving Down
+
+--- Bisa ditambahkan kalau yang punya ide ---
