@@ -96,7 +96,7 @@ function about_menu() {
           <div class="card-body">
             <h5 class="card-title">Reynata Prajnadi Tangajaya</h5>
             <p class="card-text">
-                Halo Nama saya Reynata Prajnadi Tangjaya dengan NIM 00000070642, saya bertugas untuk membuat beberapa aset dan fitur yang digunakan.
+                Halo Nama saya Reynata Prajnadi Tangjaya dengan NIM 00000070461, saya bertugas untuk membuat beberapa aset dan fitur yang digunakan.
             </p>
           </div>
         </div>
