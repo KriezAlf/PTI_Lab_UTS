@@ -137,7 +137,7 @@ function play_menu() {
       <div class="col-sm-4">
         <div id="info">
           <p id="appleCounter">
-            Apples = <span id="showApples" class="number">0</span>
+            money = <span id="showmoney" class="number">0</span>
           </p>
           <p id="gameOver"></p>
         </div>
@@ -145,7 +145,7 @@ function play_menu() {
       <div class="col-sm-4">
         <div id="info">
           <p>
-            per second =<span id="showApplesPerSecond" class="number">0</span>
+            per second =<span id="showmoneyPerSecond" class="number">0</span>
           </p>
           <p id="gameOver"></p>
         </div>
@@ -153,19 +153,18 @@ function play_menu() {
       <div class="col-sm-4">
         <div id="info">
           <p>
-            Apples per click =
-            <span id="showApplesPerClick" class="number">1</span>
+            money per click =
+            <span id="showmoneyPerClick" class="number">1</span>
           </p>
           <p id="gameOver"></p>
         </div>
       </div>
     </div>
     <div class="tampilan1" id="body">
-      <img
-        src="Aset/ASSET_GAME_CLICKER/Untitled 04-01-2023 12-41-12.gif"
-        id="clickButton"
-        onmousedown="increment()"
-      />
+    <img class="image1" src="Aset/ASSET_GAME_CLICKER/Untitled 04-01-2023 12-41-12.gif" />
+    <img class="image2" src="Aset/ASSET_GAME_CLICKER/stand toko.png" />
+    <img onclick="increment()" class="button1" />
+    <img class="image3" src="Aset/ASSET_GAME_CLICKER/meja makan.png" />
     </div>
 
     <center>
@@ -189,7 +188,7 @@ function play_menu() {
                 <div class="containerText">
                   <p>monyets: <span id="monyetNum">0</span></p>
                   <p>monyet cost: <span id="monyetCost">10</span></p>
-                  <p>+1 Apples per second</p>
+                  <p>+1 money per second</p>
                 </div>
 
                 <!-- BUTTON -->
@@ -202,7 +201,7 @@ function play_menu() {
             <div class="row">
               <div class="col-sm-6">
                 <img
-                  src="Aset/CHAR_ASSETS/monyet bayi.png"
+                  src="Aset/CHAR_ASSETS/anak ayam.png"
                   class="itemImage"
                   style="width: 100px; height: 170px"
                 />
@@ -211,7 +210,7 @@ function play_menu() {
                 <div class="containerText">
                   <p>burung: <span id="burungNum">0</span></p>
                   <p>burung cost: <span id="burungCost">10</span></p>
-                  <p>+1 Apples per Click</p>
+                  <p>+1 money per Click</p>
                 </div>
                 <div class="buyButtonContainer">
                   <button onmousedown="buyburung()" class="buyButton">Buy</button>
@@ -234,7 +233,7 @@ function play_menu() {
                 <div class="containerText">
                   <p>kucing: <span id="kucingNum">0</span></p>
                   <p>kucing cost: <span id="kucingCost">30</span></p>
-                  <p>+100 Apples per second</p>
+                  <p>+100 money per second</p>
                 </div>
 
                 <div class="buyButtonContainer">
@@ -246,7 +245,7 @@ function play_menu() {
             <div class="row">
               <div class="col-sm-6">
                 <img
-                  src="Aset/CHAR_ASSETS/anak ayam.png"
+                  src="Aset/CHAR_ASSETS/Char_Idle.png"
                   class="itemImage"
                   style="width: 100px; height: 170px"
                 />
@@ -255,7 +254,7 @@ function play_menu() {
                 <div class="containerText">
                   <p>peri: <span id="periNum">0</span></p>
                   <p>peri cost: <span id="periCost">50</span></p>
-                  <p>+1000 Apples per second</p>
+                  <p>+1000 money per second</p>
                 </div>
                 <div class="buyButtonContainer">
                   <button onmousedown="buyperi()" class="buyButton">Buy</button>
@@ -276,9 +275,9 @@ function play_menu() {
 
 // the things was run
 
-var apples = 0;
-var applesPerSecond = 0;
-var applesPerClick = 1;
+var money = 0;
+var moneyPerSecond = 0;
+var moneyPerClick = 1;
 
 // costs of items
 var monyetCost = 10;
@@ -296,17 +295,17 @@ var burungs = 0;
 
 // function that gets called when you click the apple logo
 function increment() {
-  apples += applesPerClick; // adds the number of apples per click to your total apples
+  money += moneyPerClick; // adds the number of money per click to your total money
 
-  // updates the HTML to show the new number of apples
-  document.getElementById("showApples").innerText = parseInt(apples);
+  // updates the HTML to show the new number of money
+  document.getElementById("showmoney").innerText = parseInt(money);
 }
 
 // function that happens every second
 setInterval(function () {
-  apples += applesPerSecond; // adds the number of apples per second to your total apples
-  document.getElementById("showApples").innerText = parseInt(apples); // uses DOM to change the number of apples in the HTML
-  if (apples >= 99999) {
+  money += moneyPerSecond; // adds the number of money per second to your total money
+  document.getElementById("showmoney").innerText = parseInt(money); // uses DOM to change the number of money in the HTML
+  if (money >= 99999) {
     // if it's higher than the world population
     document.getElementById("gameOver").innerText =
       "You won the game! Apple dominates the Earth!";
@@ -315,10 +314,10 @@ setInterval(function () {
 
 // will be called when user pressed buy button
 function buymonyet() {
-  if (apples >= monyetCost) {
-    apples -= monyetCost; // subtracts cost apples
+  if (money >= monyetCost) {
+    money -= monyetCost; // subtracts cost money
 
-    document.getElementById("showApples").innerText = parseInt(apples); // "updates" the HTML
+    document.getElementById("showmoney").innerText = parseInt(money); // "updates" the HTML
 
     monyets++; // increments number of that item
 
@@ -328,21 +327,21 @@ function buymonyet() {
 
     document.getElementById("monyetCost").innerText = parseInt(monyetCost);
 
-    applesPerClick += 1; // increases number of apples per second
+    moneyPerClick += 1; // increases number of money per second
 
-    document.getElementById("showApplesPerClick").innerText =
-      parseInt(applesPerClick);
+    document.getElementById("showmoneyPerClick").innerText =
+      parseInt(moneyPerClick);
   } else {
-    // if there enough apples
-    alert("You don't have enough Apples!");
+    // if there enough money
+    alert("You don't have enough money!");
   }
 }
 
 function buyburung() {
-  if (apples >= burungCost) {
-    apples -= burungCost;
+  if (money >= burungCost) {
+    money -= burungCost;
 
-    document.getElementById("showApples").innerText = parseInt(apples);
+    document.getElementById("showmoney").innerText = parseInt(money);
 
     burungs++;
 
@@ -352,19 +351,19 @@ function buyburung() {
 
     document.getElementById("burungCost").innerText = parseInt(burungCost);
 
-    applesPerClick += 1; // increases number of apples per click
+    moneyPerClick += 1; // increases number of money per click
 
-    document.getElementById("showApplesPerClick").innerText =
-      parseInt(applesPerClick);
+    document.getElementById("showmoneyPerClick").innerText =
+      parseInt(moneyPerClick);
   } else {
-    alert("You don't have enough Apples!");
+    alert("You don't have enough money!");
   }
 }
 function buykucing() {
-  if (apples >= kucingCost) {
-    apples -= kucingCost; // subtracts cost apples
+  if (money >= kucingCost) {
+    money -= kucingCost; // subtracts cost money
 
-    document.getElementById("showApples").innerText = parseInt(apples); // "updates" the HTML
+    document.getElementById("showmoney").innerText = parseInt(money); // "updates" the HTML
 
     kucing++; // increments number of that item
 
@@ -374,21 +373,21 @@ function buykucing() {
 
     document.getElementById("kucingCost").innerText = parseInt(kucingCost);
 
-    applesPerSecond += 100; // hitungan di mulai dari 0 jadi 98
+    moneyPerSecond += 100; // hitungan di mulai dari 0 jadi 98
 
-    document.getElementById("showApplesPerSecond").innerText =
-      parseInt(applesPerSecond);
+    document.getElementById("showmoneyPerSecond").innerText =
+      parseInt(moneyPerSecond);
   } else {
-    // if there enough apples
-    alert("You don't have enough Apples!");
+    // if there enough money
+    alert("You don't have enough money!");
   }
 }
 
 function buyperi() {
-  if (apples >= periCost) {
-    apples -= periCost; // subtracts cost apples
+  if (money >= periCost) {
+    money -= periCost; // subtracts cost money
 
-    document.getElementById("showApples").innerText = parseInt(apples); // "updates" the HTML
+    document.getElementById("showmoney").innerText = parseInt(money); // "updates" the HTML
 
     peri++; // increments number of that item
 
@@ -398,12 +397,12 @@ function buyperi() {
 
     document.getElementById("periCost").innerText = parseInt(periCost);
 
-    applesPerSecond += 1000; // hitungan di mulai dari 0 jadi 999
+    moneyPerSecond += 1000; // hitungan di mulai dari 0 jadi 999
 
-    document.getElementById("showApplesPerSecond").innerText =
-      parseInt(applesPerSecond);
+    document.getElementById("showmoneyPerSecond").innerText =
+      parseInt(moneyPerSecond);
   } else {
-    // if there enough apples
-    alert("You don't have enough Apples!");
+    // if there enough money
+    alert("You don't have enough money!");
   }
 }

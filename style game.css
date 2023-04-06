@@ -155,7 +155,7 @@ img {
   }
 }
 #scroll {
-  height: 200px; /* set a fixed height */
+  height: 600px; /* set a fixed height */
   overflow-y: scroll; /* enable vertical scrolling */
   cursor: grab;
 }
